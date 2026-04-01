@@ -12,8 +12,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
   reporter: [
-    ['list'],
-    ['github'],
+    ['list'],  
     ['junit', { outputFile: 'reports-e2e/junit.xml' }],
     ['html', { outputFolder: 'reports-e2e/html', open: 'never' }],
   ],
